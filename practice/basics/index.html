@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, inifial-scale=1.0">
+		<title>Learning Vue</title>
+		<script src="https://unpkg.com/vue@3.0.2"></script>
+	</head>
+	<body>
+		<h1>
+			Hello Vue :)
+		</h1>
+
+		<div id="app">
+			<div v-if="showBooks">
+				<p> {{ age }} </p>
+				<button v-on:click="age++">Increase</button>
+				<button @click="decreaseAge">Decrease</button>
+			</div>
+			<button @click="toggleShowBooks">
+				<span v-if="showBooks">HideBook</span>
+				<span v-else="!showBooks">showBooks</span>
+			</button>
+
+			<div v-show="showBooks">Show books</div>
+		</div>
+	</body>
+	<script src="app.js"></script>
+</html>
